@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --background: hsl(48 33% 97%);
+  --foreground: hsl(135 20% 12%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(135 20% 12%);
+  --primary: hsl(142 72% 29%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(40 24% 93%);
+  --secondary-foreground: hsl(135 20% 12%);
+  --muted: hsl(40 21% 92%);
+  --muted-foreground: hsl(137 8% 35%);
+  --accent: hsl(141 84% 93%);
+  --accent-foreground: hsl(144 61% 20%);
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(40 19% 87%);
+  --input: hsl(40 19% 87%);
+  --ring: hsl(142 72% 29%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(135 20% 12%);
+  --sidebar: hsl(40 24% 95%);
+  --sidebar-foreground: hsl(135 20% 12%);
+  --sidebar-primary: hsl(142 72% 29%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(141 84% 93%);
+  --sidebar-accent-foreground: hsl(144 61% 20%);
+  --sidebar-border: hsl(40 19% 87%);
+  --sidebar-ring: hsl(142 72% 29%);
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(142 21% 7%);
+  --foreground: hsl(140 14% 96%);
+  --card: hsl(145 21% 11%);
+  --card-foreground: hsl(140 14% 96%);
+  --primary: hsl(142 71% 45%);
+  --primary-foreground: hsl(142 58% 6%);
+  --secondary: hsl(144 19% 15%);
+  --secondary-foreground: hsl(140 14% 96%);
+  --muted: hsl(146 20% 14%);
+  --muted-foreground: hsl(143 11% 65%);
+  --accent: hsl(148 32% 17%);
+  --accent-foreground: hsl(141 84% 93%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(143 19% 18%);
+  --input: hsl(143 19% 18%);
+  --ring: hsl(142 71% 45%);
+  --popover: hsl(145 21% 11%);
+  --popover-foreground: hsl(140 14% 96%);
+  --sidebar: hsl(145 21% 9%);
+  --sidebar-foreground: hsl(140 14% 96%);
+  --sidebar-primary: hsl(142 71% 45%);
+  --sidebar-primary-foreground: hsl(142 58% 6%);
+  --sidebar-accent: hsl(148 32% 17%);
+  --sidebar-accent-foreground: hsl(141 84% 93%);
+  --sidebar-border: hsl(143 19% 18%);
+  --sidebar-ring: hsl(142 71% 45%);
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-display);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  body { @apply font-sans; }
+  h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+}
